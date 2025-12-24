@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>For Becky 💛</title>
-    <noscript id="site-version">1.0.1</noscript>
+    <title>For Becky 💙</title>
+    <noscript id="site-version">1.0.2</noscript>
 
     <meta property="og:title" content="For Becky 💛" />
     <meta property="og:description" content="Tap to reveal ✨" />
@@ -107,7 +107,7 @@
         margin: 0 0 18px;
         opacity: .72;
       }
-
+      
       .card {
         border-radius: 20px;
         overflow: hidden;
@@ -116,12 +116,19 @@
         background: rgba(255,255,255,.65);
         backdrop-filter: blur(12px);
         position: relative;
+      
+        aspect-ratio: 16 / 9;
+        width: 100%;
+        max-width: 980px;
+        min-height: 320px;
       }
 
       video {
         width: 100%;
+        height: 100%;
         display: block;
         background: #000;
+        object-fit: cover;
       }
 
       /* Reveal overlay */
@@ -231,7 +238,7 @@
       </p>
 
       <div class="card" id="card">
-        <div class="reveal" id="reveal">
+        <div class="reveal" id="reveal" role="button" tabindex="0" aria-label="Tap to reveal the video">
           <div class="reveal-inner" id="revealInner">
             <div class="reveal-title">Hey Becky ✨</div>
             <div class="reveal-msg">
